@@ -1,0 +1,49 @@
+body 
+{
+background-image: url(images/img22.jpg);
+margin: 0;
+font-family: Arial,
+}
+.cool
+{
+    background-color : Lime;
+    color: White;
+}
+.topnav {
+overflow:hidden;
+background-color:Maroon;
+        height: 47px;
+    }
+.topnav a {
+float: right;
+color: #f2f2f2;
+text-align: center;
+padding: 14px;
+font-size: 17px;
+}
+.topnav a:hover {
+background-color: white;
+color: black;
+}
+th, td {
+padding: 15px;
+}
+.table1 {
+border-style: none;
+border-color: inherit;
+border-width: medium;
+margin-left: 85px;
+padding: 10px;
+margin-bottom: 30px;
+width: 1048px;
+}
+.columns {
+float: left;
+width: 33%;
+padding: 5px;
+}
+.columnss {
+float: left;
+width: 33.33%;
+padding: 5px;
+}

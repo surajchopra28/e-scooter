@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Login Page!</title>
+<style type="text/css">
+body
+{
+background-image: url(images/img22.jpg);
+margin: 0;
+font-family: Arial,
+background-color: hsla(89, 43%, 51%, 0.3);
+margin: 0;
+}
+h2{
+padding: 30px 35px;
+margin: -10px -50px;
+text-align:center;
+width: 449px;
+    }
+.topnav {
+overflow: hidden;
+background-color:Maroon;
+}
+.topnav a {
+float: right;
+color: #f2f2f2;
+text-align: center;
+padding: 14px;
+font-size: 15px;
+margin-left:-10px;
+}
+.topnav a:hover {
+background-color: white;
+color: black;
+}
+div.one{
+width:1350px;
+height: 610px;
+}
+div.two{
+border-right: 10px solid gray;
+border-left:10px solid Gray;
+border-top: 1px solid gray;
+border-bottom: 1px solid gray;
+width: 500px;
+margin-left:330px;
+padding: 10px 50px 25px;
+font-family: raleway;
+float:none;
+margin-top:50px;
+border-radius:100px;
+}
+div.three
+{
+font-family: raleway;
+font-size: 10px;
+margin-top:10px;
+}
+input[type=text],input[type=password]{
+width: 100%;
+height: 40px;
+padding: 5px;
+margin-bottom: 25px;
+margin-top: 5px;
+font-size: 16px;
+border-radius: 5px;
+}
+label{
+color: black;
+font-size: 14px;
+font-weight: bold;
+}
+center{
+font-size:32px;
+}
+.back{
+padding: 3px 20px;
+border-radius: 2px;
+color: red;
+}
+input[type=button]{
+font-size: 16px;
+border: 1px solid #e5a900;
+color: black;
+font-weight: bold;
+cursor: pointer;
+width: 99%;
+border-radius: 5px;
+padding: 10px;
+        margin-left: 13px;
+    }
+    #form_id
+    {
+        width: 407px;
+        height: 326px;
+    }
+</style>
+<script type="text/javascript">
+    var attempt = 3;
+    function validate() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username == "suraj chopra" && password == "suraj123.0") {
+            alert("Login successfully");
+            window.location = "Admin page.html";
+            return false;
+        }
+        else {
+            attempt--;
+            alert("You have left " + attempt + " attempt;");
+            if (attempt == 0) {
+                document.getElementById("username").disabled = true;
+                document.getElementById("password").disabled = true;
+                document.getElementById("submit").disabled = true;
+                return false;
+            }
+        }
+    }
+</script>
+</head>
+<body>
+<div class="topnav">
+<a href="About us.html">About Us</a>
+<a href="home page.aspx">Home Page</a>
+<a href="contactus.aspx">Contact us</a>
+<div style="margin-right:23.5%; font-size:xx-large; font-style:italic; font-weight:bolder; color:White;"><marquee>  WELCOME  To  E-Scooters.com  </marquee></div>
+</div>
+<div class="start" style="margin-top: 20px; margin-left:380px">
+<strong>Welcome to the Administration login page. Please fill in the login details below.</strong></div>
+<div class="one">
+<div class="two">
+<h2><u>Login Here</u></h2>
+<form id="form_id" method="post" name="myform">
+<label>User Name :</label>
+<input type="text" name="username" id="username" style="margin-left: 10px;"><br><br>
+<label>Password :</label>
+<input type="password" name="password" id="password" style="margin-left:10px;"><br><br>
+<input type="button" value="Submit" id="submit" onclick="validate()" 
+    style="color: #000000; background-color: #FF9B04;"/>
+<p style="margin-top: 15px; font-size:12px; font-family: raleway;">
+<font color="red">Note</font>- You will only have 3 login attempts. If you failed to login in these attemps, you will be blocked for one day.</p>
+</form>
+</div>
+</body>
+</html>
